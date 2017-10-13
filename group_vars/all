@@ -1,27 +1,27 @@
 user:
-    name: pigmonkey
+    name: mattias
     uid: 1000
     group: pigmonkey
-    shell: /usr/bin/zsh
-    email:  peter@havenaut.net
+    shell: /bin/bash
+    email: mattiasgiese@posteo.net
     log:
         dir: log
         rotate: 8
 
-hostname: nous
+hostname: amarula
 
 dotfiles:
-    url: git@github.com:pigmonkey/dotfiles.git
-    destination: projects/dotfiles
+    url: git@github.com:mattiasgiese/dotfiles.git
+    destination: git/dotfiles
     rcup_flags: -fx README.md
 
 aur:
     dir: aur
     packages:
+        - pacaur
         - aura-bin
         - downgrade
         - overdue
-        - zplug
         - dateutils
         - miller
         - myrepos
@@ -34,7 +34,7 @@ ssh:
 
 gnupg:
     enable_agent: True
-    emulate_ssh: True
+    emulate_ssh: False
 
 mail:
     sync_tool: isync
@@ -57,7 +57,7 @@ network:
         - faeec88c-79ec-4840-ab25-ea356af8a81b
 
 editors:
-    - gvim
+    - neovim
 
 video_drivers:
     - libva-intel-driver
@@ -70,6 +70,7 @@ base_packages:
     - glances
     - coreutils
     - moreutils
+    - most
     - reflector
     - bc
     - ranger
@@ -80,11 +81,9 @@ base_packages:
     - arch-wiki-docs
     - python-keyring
     - python-secretstorage
-    - fabric
     - tig
     - ruby
     - pv
-    - minicom
     - jq
     - python-docs
     - python2-docs
@@ -93,7 +92,6 @@ base_packages:
 
 filesystem_packages:
     - dosfstools
-    - hfsprogs
     - ntfs-3g
     - exfat-utils
 
@@ -101,7 +99,6 @@ browser_choices:
     - firefox -P default
     - firefox -P work
     - firewarden chromium
-    - tor-browser-en
     - play
     - qcode
     - "| xclip -selection c"
@@ -126,7 +123,7 @@ bitlbee:
 bootloader: grub
 
 postgresql:
-    enable: True
+    enable: False
 
 fingerprint: False
 
@@ -193,7 +190,7 @@ journal:
     max_size: 500M
 
 udisks:
-    auto_mount: False
+    auto_mount: True
     shared_mount: True
 
 hostsctl:
