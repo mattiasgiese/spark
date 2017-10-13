@@ -24,10 +24,8 @@
 - name: Add user to video group
   user: name={{ user.name }} groups=video append=yes
 
-- include: sxhkd.yml
 - include: unclutter.yml
 - include: autorandr.yml
 - include: srandrd.yml
-- include: termite.yml
 - include: autocutsel.yml
 - include: xdg.yml

@@ -2,11 +2,6 @@
 - name: Install i3
   pacman: name=i3 state=present
 
-- name: Install py3status
-  aur: name=py3status user={{ user.name }}
-  tags:
-    - aur
-
 - name: Verify that default applications file exists
   file: path=/etc/xdg/mimeapps.list state=touch
   tags:

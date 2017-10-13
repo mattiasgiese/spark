@@ -6,7 +6,7 @@
       - bluez-libs
       - bluez-utils
       - bluez-firmware
-      - blueman
+      - blueberry
   notify:
     - restart pulse as user
 

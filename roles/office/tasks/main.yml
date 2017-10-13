@@ -49,25 +49,5 @@
   tags:
     - firejail
 
-- name: Install enscript
-  pacman: name=enscript state=present
-
-- name: Install Simple Scan
-  pacman: name=simple-scan state=present
-
-- name: Install pandoc
-  pacman: name=pandoc state=present
-
-- name: Install texlive-core
-  pacman: name=texlive-core state=present
-
-- name: Install texlive-latexextra
-  pacman: name=texlive-latexextra state=present
-
-- name: Install masterpdfeditor
-  aur: name=masterpdfeditor user={{ user.name }}
-  tags:
-    - aur
-
 - name: Install pdfgrep
   pacman: name=pdfgrep state=present
