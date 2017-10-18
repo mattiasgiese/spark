@@ -105,6 +105,8 @@ browser_choices:
     - play
     - qcode
     - "| xclip -selection c"
+    - chromium
+    - qutebrowser
 
 passwordless_sudo:
     - /usr/bin/openvpn*
