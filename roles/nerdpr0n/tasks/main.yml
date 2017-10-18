@@ -1,0 +1,11 @@
+---
+- name: Install some nice things
+  pacman:
+    name: "{{ item }}"
+  with_items:
+    - cowsay
+
+- name: Install some nice things, coming from AUR
+  aur:
+    name: toilet
+    user: "{{ user.name }}"

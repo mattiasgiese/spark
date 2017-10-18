@@ -53,6 +53,7 @@
     - { role: wttr, tags: ['wttr'] }
     - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
     - { role: kiwix, tags: ['kiwix'] }
+    - { role: nerdpr0n, tags: ['nerdpr0n'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"
