@@ -56,7 +56,6 @@ network:
 
 editors:
     - neovim
-    - vim
 
 video_drivers:
     - libva-intel-driver
