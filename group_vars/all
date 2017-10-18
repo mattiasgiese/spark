@@ -81,6 +81,7 @@ base_packages:
     - python-keyring
     - python-secretstorage
     - tig
+    - dateutils
     - ruby
     - pv
     - jq
