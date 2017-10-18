@@ -39,6 +39,7 @@
       - tex-gyre-fonts
       - ttf-droid
       - ttf-ubuntu-font-family
+      - ttf-hack
 
 - name: Install AUR fonts
   aur: name={{ item }} user={{ user.name }}
