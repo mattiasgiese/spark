@@ -1,7 +1,7 @@
 user:
     name: mattias
     uid: 1000
-    group: pigmonkey
+    group: mattias
     shell: /bin/bash
     email: mattiasgiese@posteo.net
     log:
@@ -22,14 +22,12 @@ aur:
         - aura-bin
         - downgrade
         - overdue
-        - dateutils
         - miller
         - myrepos
         - ctmg
 
 ssh:
     port: 22
-    user_key: /root/id_rsa
     enable_sshd: False
 
 gnupg:
@@ -68,6 +66,7 @@ base_packages:
     - git
     - rsync
     - glances
+    - dateutils
     - coreutils
     - moreutils
     - most
