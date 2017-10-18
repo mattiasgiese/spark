@@ -22,6 +22,8 @@
   aur:
     name: hashdeep
     state: present
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - hashdeep

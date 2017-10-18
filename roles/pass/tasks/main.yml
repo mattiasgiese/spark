@@ -4,16 +4,22 @@
 
 - name: Install pass-otp
   aur: name=pass-otp
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 
 - name: Install pass-update
   aur: name=pass-update
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 
 - name: Install rofi-pass
   aur: name=rofi-pass
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - rofi

@@ -4,6 +4,8 @@
 
 - name: Install hamlib
   aur: name={{ item }}
+  become: True
+  become_user: "{{ user.name }}"
   with_items:
     - perl-opcodes
     - hamlib

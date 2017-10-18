@@ -1,6 +1,8 @@
 ---
 - name: Install cli53
-  aur: name=cli53 user={{ user.name }}
+  aur: name=cli53
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - cli53

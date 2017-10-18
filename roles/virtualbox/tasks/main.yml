@@ -10,6 +10,8 @@
 
 - name: Install VirtualBox extensions
   aur: name=virtualbox-ext-oracle
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

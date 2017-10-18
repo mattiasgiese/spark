@@ -3,7 +3,9 @@
   pacman: name=git-annex state=present
 
 - name: Install git-annex-remote-rclone
-  aur: name=git-annex-remote-rclone user={{ user.name }}
+  aur: name=git-annex-remote-rclone
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

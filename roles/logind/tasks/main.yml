@@ -1,0 +1,7 @@
+---
+- name: Disable suspend on lid close
+  ini_file:
+    path: "{{ logind_config }}"
+    section: Login
+    option: HandleLidSwitch
+    value: ignore

@@ -4,11 +4,15 @@
 
 - name: Install gpxpy
   aur: name=python-gpxpy
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 
 - name: Install OpenCPN
   aur: name=opencpn
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

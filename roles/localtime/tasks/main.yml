@@ -1,6 +1,8 @@
 ---
 - name: Install localtime
   aur: name=localtime-git
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

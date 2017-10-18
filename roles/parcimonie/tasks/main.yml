@@ -1,6 +1,8 @@
 ---
 - name: Install parcimonie.sh
   aur: name=parcimonie-sh-git
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

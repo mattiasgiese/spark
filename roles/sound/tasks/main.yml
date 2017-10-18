@@ -16,10 +16,14 @@
 
 - name: Install pasystray
   aur: name=pasystray-gtk3-standalone
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 
 - name: Install pulseaudio-ctl
   aur: name=pulseaudio-ctl
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur

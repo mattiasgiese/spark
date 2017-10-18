@@ -67,6 +67,8 @@
   aur:
     name: tor-browser-en 
     state: present
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - tor-browser
     - aur

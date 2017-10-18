@@ -44,6 +44,8 @@
 - name: Install AUR fonts
   aur: 
     name: "{{ item }}"
+  become: True
+  become_user: "{{ user.name }}"
   with_items:
       - ttf-signika
       - ttf-quintessential

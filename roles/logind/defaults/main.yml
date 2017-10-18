@@ -1,0 +1,2 @@
+---
+logind_config: '/etc/systemd/logind.conf'

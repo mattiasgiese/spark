@@ -5,5 +5,7 @@
     - zimlib-git
     - ctpp2
     - kiwix-cli-git
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur

@@ -1,12 +1,16 @@
 ---
 - name: Install acpi_call for TLP battery functions
   aur: name=acpi_call-dkms
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - battery
 
 - name: Install tpacpi-bat
   aur: name=tpacpi-bat
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - battery

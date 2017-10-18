@@ -15,7 +15,12 @@
 
 - name: Additional aur packages
   aur:
-    name: polybar
+    name: "{{ item }}"
+  with_items:
+    - siji-git
+    - polybar
+  become: True
+  become_user: "{{ user.name }}"
 
 - name: Verify that default applications file exists
   file: path=/etc/xdg/mimeapps.list state=touch

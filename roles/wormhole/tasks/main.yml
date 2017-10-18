@@ -1,6 +1,8 @@
 ---
 - name: Install magic-wormhole
   aur: name={{ item }}
+  become: True
+  become_user: "{{ user.name }}"
   with_items:
       - python-hkdf
       - python-spake2

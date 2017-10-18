@@ -3,8 +3,12 @@
 - name: Install gajim
   aur:
     name: "{{ item }}"
+  become: True
+  become_user: "{{ user.name }}"
   with_items: "{{ gajim_packages }}"
 - name: Install gajim plugins
   aur:
     name: "{{ item }}"
+  become: True
+  become_user: "{{ user.name }}"
   with_items: "{{ gajim_plugins }}"

@@ -36,7 +36,7 @@
     - { role: screensaver, tags: ['screensaver'] }
     - { role: weechat, tags: ['weechat'] }
     - { role: taskwarrior, tags: ['taskwarrior'] }
-    - { role: ledger, tags: ['ledger'] }
+    #    - { role: ledger, tags: ['ledger'] }
     - { role: mail, tags: ['mail'] }
     - { role: cups, tags: ['cups'] }
     - { role: office, tags: ['office'] }
@@ -54,6 +54,8 @@
     - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
     - { role: kiwix, tags: ['kiwix'] }
     - { role: nerdpr0n, tags: ['nerdpr0n'] }
+    - { role: gajim, tags: ['gajim'] }
+    - { role: logind, tags: ['logind'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"

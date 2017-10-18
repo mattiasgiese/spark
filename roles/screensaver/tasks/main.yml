@@ -4,6 +4,8 @@
 
 - name: Install physlock
   aur: name=physlock
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

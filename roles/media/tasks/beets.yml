@@ -16,13 +16,17 @@
     - beets
 
 - name: Install python-pyacoustid
-  aur: name=python-pyacoustid user={{ user.name }}
+  aur: name=python-pyacoustid
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - beets
 
 - name: Install mp3val
-  aur: name=mp3val user={{ user.name }}
+  aur: name=mp3val
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
     - beets

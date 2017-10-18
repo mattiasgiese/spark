@@ -3,6 +3,8 @@
   aur: 
     name: rcm
     state: present
+  become: True
+  become_user: "{{ user.name }}"
   when: dotfiles is defined
   tags:
     - aur

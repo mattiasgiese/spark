@@ -6,6 +6,8 @@
   aur: 
     name: firewarden
     state: present
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

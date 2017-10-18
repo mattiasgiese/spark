@@ -9,5 +9,7 @@
 
 - name: Install taskopen
   aur: name=taskopen
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur

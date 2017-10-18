@@ -2,6 +2,8 @@
 - name: Install hostsctl
   aur:
     name: hostsctl
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 

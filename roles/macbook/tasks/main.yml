@@ -4,5 +4,7 @@
 
 - name: Install xf86-input-mtrack-git
   aur: name=xf86-input-mtrack-git
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
