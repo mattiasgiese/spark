@@ -8,6 +8,10 @@
   with_items:
     - i3lock
     - i3blocks
+    - dunst
+    - redshift
+    - compton
+    - nitrogen
 
 - name: Additional aur packages
   aur:
