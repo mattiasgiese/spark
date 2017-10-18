@@ -2,6 +2,18 @@
 - name: Install i3
   pacman: name=i3 state=present
 
+- name: Install additional tools
+  pacman:
+    name: "{{ item }}"
+  with_items:
+    - i3lock
+    - i3blocks
+
+- name: Additional aur packages
+  aur:
+    name: polybar
+    user: "{{ user.name }}"
+
 - name: Verify that default applications file exists
   file: path=/etc/xdg/mimeapps.list state=touch
   tags:
