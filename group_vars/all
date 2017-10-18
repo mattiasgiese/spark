@@ -56,12 +56,15 @@ network:
 
 editors:
     - neovim
+    - vim
 
 video_drivers:
     - libva-intel-driver
 
 base_packages:
     - base-devel
+    - atop
+    - mosh
     - tmux
     - git
     - rsync
@@ -102,6 +105,8 @@ browser_choices:
     - play
     - qcode
     - "| xclip -selection c"
+    - chromium
+    - qutebrowser
 
 passwordless_sudo:
     - /usr/bin/openvpn*
