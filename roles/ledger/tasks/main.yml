@@ -1,5 +1,5 @@
 ---
 - name: Install ledger
-  aur: name=ledger user={{ user.name }}
+  aur: name=ledger
   tags:
     - aur

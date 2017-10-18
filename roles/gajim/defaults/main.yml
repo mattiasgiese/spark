@@ -1,0 +1,9 @@
+---
+gajim_plugins:
+  - gajim-plugin-omemo-gtk3
+  - python2-nbxmpp-git
+  - gajim-penguins
+  - gajim-plugin-httpupload
+gajim_packages:
+  - python-nbxmpp-git
+  - gajim-git

@@ -3,6 +3,6 @@
   copy: src=50-mtrack-git.conf dest=/etc/X11/xorg.conf.d/50-mtrack-git.conf
 
 - name: Install xf86-input-mtrack-git
-  aur: name=xf86-input-mtrack-git user={{ user.name }}
+  aur: name=xf86-input-mtrack-git
   tags:
     - aur

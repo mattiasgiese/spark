@@ -8,6 +8,6 @@
     - refresh holidays
 
 - name: Install taskopen
-  aur: name=taskopen user={{ user.name }}
+  aur: name=taskopen
   tags:
     - aur

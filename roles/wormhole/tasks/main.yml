@@ -1,6 +1,6 @@
 ---
 - name: Install magic-wormhole
-  aur: name={{ item }} user={{ user.name }}
+  aur: name={{ item }}
   with_items:
       - python-hkdf
       - python-spake2

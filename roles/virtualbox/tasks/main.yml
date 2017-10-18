@@ -9,7 +9,7 @@
     - virtualbox-host-dkms
 
 - name: Install VirtualBox extensions
-  aur: name=virtualbox-ext-oracle user={{ user.name }}
+  aur: name=virtualbox-ext-oracle
   tags:
     - aur
 

@@ -1,6 +1,6 @@
 ---
 - name: Install mutt
-  aur: name=neomutt user={{ user.name }}
+  aur: name=neomutt
   tags:
     - aur
 
@@ -24,7 +24,7 @@
     - firejail
 
 - name: Install urlview
-  aur: name=urlview user={{ user.name }}
+  aur: name=urlview
   tags:
     - aur
 

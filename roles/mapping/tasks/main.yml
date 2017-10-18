@@ -3,12 +3,12 @@
   pacman: name=viking state=present
 
 - name: Install gpxpy
-  aur: name=python-gpxpy user={{ user.name }}
+  aur: name=python-gpxpy
   tags:
     - aur
 
 - name: Install OpenCPN
-  aur: name=opencpn user={{ user.name }}
+  aur: name=opencpn
   tags:
     - aur
 

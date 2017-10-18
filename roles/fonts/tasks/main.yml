@@ -42,7 +42,8 @@
       - ttf-hack
 
 - name: Install AUR fonts
-  aur: name={{ item }} user={{ user.name }}
+  aur: 
+    name: "{{ item }}"
   with_items:
       - ttf-signika
       - ttf-quintessential

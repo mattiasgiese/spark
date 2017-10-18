@@ -19,7 +19,9 @@
     - atool
 
 - name: Install hashdeep
-  aur: name=hashdeep user={{ user.name }}
+  aur:
+    name: hashdeep
+    state: present
   tags:
     - aur
     - hashdeep

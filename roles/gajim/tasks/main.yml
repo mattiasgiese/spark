@@ -1,0 +1,10 @@
+
+---
+- name: Install gajim
+  aur:
+    name: "{{ item }}"
+  with_items: "{{ gajim_packages }}"
+- name: Install gajim plugins
+  aur:
+    name: "{{ item }}"
+  with_items: "{{ gajim_plugins }}"

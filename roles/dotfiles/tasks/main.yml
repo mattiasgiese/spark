@@ -1,6 +1,8 @@
 ---
 - name: Install rcm
-  aur: name=rcm user={{ user.name }}
+  aur: 
+    name: rcm
+    state: present
   when: dotfiles is defined
   tags:
     - aur

@@ -16,7 +16,6 @@
 - name: Additional aur packages
   aur:
     name: polybar
-    user: "{{ user.name }}"
 
 - name: Verify that default applications file exists
   file: path=/etc/xdg/mimeapps.list state=touch

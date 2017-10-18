@@ -9,7 +9,8 @@
   pacman: name=terraform state=present
 
 - name: Install vault and nomad
-  aur: name={{ item }} user={{ user.name }}
+  aur: 
+    name: "{{ item }}"
   with_items:
     - vault-bin
     - nomad

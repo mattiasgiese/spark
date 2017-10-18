@@ -1,6 +1,7 @@
 ---
 - name: Install hostsctl
-  aur: name=hostsctl user={{ user.name }}
+  aur:
+    name: hostsctl
   tags:
     - aur
 

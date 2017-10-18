@@ -1,6 +1,6 @@
 ---
 - name: Install localtime
-  aur: name=localtime-git user={{ user.name }}
+  aur: name=localtime-git
   tags:
     - aur
 
