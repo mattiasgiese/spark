@@ -56,12 +56,15 @@ network:
 
 editors:
     - neovim
+    - vim
 
 video_drivers:
     - libva-intel-driver
 
 base_packages:
     - base-devel
+    - atop
+    - mosh
     - tmux
     - git
     - rsync
