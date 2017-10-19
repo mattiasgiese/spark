@@ -1,0 +1,7 @@
+---
+docker_packages:
+  - docker
+  - docker-compose
+  - docker-machine
+docker_group: 'docker'
+docker_service: 'docker'
