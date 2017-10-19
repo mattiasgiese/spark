@@ -43,6 +43,7 @@
     - { role: redshift, tags: ['redshift'] }
     - { role: virtualbox, tags: ['virtualbox'] }
     - { role: hashicorp, tags: ['hashicorp'] }
+    - { role: docker, tags: ['docker'] }
     - { role: sound, tags: ['sound'] }
     - { role: pim, tags: ['pim'] }
     - { role: formd, tags: ['formd'] }
