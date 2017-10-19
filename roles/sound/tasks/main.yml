@@ -14,12 +14,12 @@
               state=present
               line="load-module module-switch-on-connect"
 
-- name: Install pasystray
-  aur: name=pasystray-gtk3-standalone
-  become: True
-  become_user: "{{ user.name }}"
-  tags:
-    - aur
+#- name: Install pasystray
+#  aur: name=pasystray-gtk3-standalone
+#  become: True
+#  become_user: "{{ user.name }}"
+#  tags:
+#    - aur
 
 - name: Install pulseaudio-ctl
   aur: name=pulseaudio-ctl
