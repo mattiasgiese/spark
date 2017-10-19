@@ -43,7 +43,7 @@ mail:
     sync_on: trusted
 
 network:
-    spoof_mac: True
+    spoof_mac: False
     conn_check:
         interval: 0
     trusted_uuid:
@@ -56,6 +56,9 @@ network:
 
 editors:
     - neovim
+    - python-neovim
+    - python2-neovim
+
 
 video_drivers:
     - libva-intel-driver
