@@ -1,0 +1,5 @@
+---
+vagrant_plugins:
+  - vagrant-vbguest
+  - vagrant-hostmanager
+  - vagrant-sshfs

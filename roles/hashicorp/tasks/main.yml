@@ -1,6 +1,24 @@
 ---
 - name: Install vagrant
-  pacman: name=vagrant state=present
+  pacman:
+    name: vagrant
+    state: present
+
+- name: Get list of current vagrant plugins
+  command: 'vagrant plugin list'
+  register: current_vagrant_plugins
+  become: true
+  become_method: 'su'
+  become_user: "{{ user.name }}"
+
+- name: Install vagrant plugins
+  command: "/usr/bin/vagrant plugin install {{ item }}"
+  ignore_errors: True
+  with_items: "{{ vagrant_plugins }}"
+  when: "current_vagrant_plugins.stdout.find(item) == -1"
+  become: true
+  become_method: 'su'
+  become_user: "{{ user.name }}"
 
 - name: Install consul
   pacman: name=consul state=present
@@ -9,7 +27,7 @@
   pacman: name=terraform state=present
 
 - name: Install vault and nomad
-  aur: 
+  aur:
     name: "{{ item }}"
   become: True
   become_user: "{{ user.name }}"
