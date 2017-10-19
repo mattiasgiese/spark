@@ -1,6 +1,7 @@
 ---
 - name: Install mutt
-  aur: name=neomutt
+  aur:
+    name: neomutt
   become: True
   become_user: "{{ user.name }}"
   tags:
@@ -27,6 +28,8 @@
 
 - name: Install urlview
   aur: name=urlview
+  become: True
+  become_user: "{{ user.name }}"
   tags:
     - aur
 
