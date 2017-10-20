@@ -48,6 +48,7 @@
   become: yes
   become_user: "{{ user.name }}"
   when: gpg_key != ''
+  ignore_errors: yes
 
 # This will break if run as root. Set user to use with makepkg with 'makepkg_user' var
 - name: AUR | {{ pkg_name }} | build package, including missing dependencies

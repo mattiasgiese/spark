@@ -9,8 +9,35 @@
   tags:
     - aur
 
+- name: Define short hand for SSH key
+  set_fact:
+    df_key: "/home/{{ user.name }}/.ssh/dotfiles_ssh_key"
+  when: dotfiles_ssh_key is defined
+
+- name: Deploy SSH key for dotfiles repo
+  file:
+    path: "/home/{{ user.name }}/.ssh"
+    state: directory
+    mode: '0700'
+    owner: "{{ user.name }}"
+  when: dotfiles_ssh_key is defined
+
+- name: Deploy SSH key for dotfiles repo
+  copy:
+    src: "{{ dotfiles_ssh_key }}"
+    dest: "{{ df_key }}"
+  mode: '0600'
+  become: True
+  become_user: "{{ user.name }}"
+  when: dotfiles_ssh_key is defined
+
 - name: Clone user dotfiles
-  git: repo={{ dotfiles.url }} dest=/home/{{ user.name }}/{{ dotfiles.destination }} accept_hostkey=yes update=no
+  git:
+    repo: "{{ dotfiles.url }}"
+    dest: "/home/{{ user.name }}/{{ dotfiles.destination }}"
+    accept_hostkey: yes
+    update: no
+    key_file: "{{ df_key|default(omit) }}"
   when: dotfiles is defined
   become: yes
   become_user: "{{ user.name }}"
