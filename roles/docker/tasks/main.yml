@@ -16,3 +16,15 @@
     name: "{{ docker_service }}"
     state: started
     enabled: yes
+
+- name: Get a list of current docker base images
+  shell: "docker images --format={% raw %}'{{ .Repository }}:{{ .Tag }}'{% endraw %}"
+  register: current_docker_images
+
+- name: Pull some base docker images
+  shell: "docker pull {{item}}"
+  with_items: "{{ docker_base_images }}"
+  when:
+    - docker_base_images is defined
+    - "current_docker_images.stdout.find(item) == -1"
+
