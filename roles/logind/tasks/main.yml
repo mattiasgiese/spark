@@ -5,3 +5,10 @@
     section: Login
     option: HandleLidSwitch
     value: ignore
+
+- name: Power button should shutdown the laptop
+  ini_file:
+    path: "{{ logind_config }}"
+    section: Login
+    option: HandlePowerKey
+    value: poweroff
