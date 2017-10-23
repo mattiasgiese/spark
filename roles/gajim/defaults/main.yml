@@ -6,3 +6,4 @@ gajim_plugins:
 gajim_packages:
   - python-nbxmpp-git
   - gajim-git
+  - python-gnupg
