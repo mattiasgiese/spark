@@ -1,0 +1,10 @@
+[Unit]
+Description=Mail indexer timer
+
+[Timer]
+OnBootSec=10
+OnUnitActiveSec=7min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

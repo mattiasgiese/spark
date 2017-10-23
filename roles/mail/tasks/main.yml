@@ -33,11 +33,9 @@
   tags:
     - aur
 
-- name: Install notmuch
-  pacman: name=notmuch state=present
-
-- include: msmtp.yml
-- include: isync.yml
-- include: offlineimap.yml
-- include: mailsync.yml
-- include: contacts.yml
+- include_tasks: notmuch.yml
+- include_tasks: msmtp.yml
+- include_tasks: isync.yml
+# - include: offlineimap.yml
+# - include: mailsync.yml
+- include_tasks: contacts.yml

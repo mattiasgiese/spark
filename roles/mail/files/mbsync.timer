@@ -1,0 +1,10 @@
+[Unit]
+Description=Mailbox sync timer
+
+[Timer]
+OnBootSec=10
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

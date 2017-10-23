@@ -1,17 +1,16 @@
 ---
-- name: Install isync
-  pacman: name=isync state=present
-  tags:
-    - isync
+- name: Install notmuch
+  pacman: name=notmuch state=present
 
-- name: Install isync systemd timers and units
+- name: Install notmuch systemd timers and units
   include_role:
     name: cans.systemd-unit-install
   vars:
     systemd_unit_install_units:
-      - unit: files/mbsync.timer
-      - unit: files/mbsync.service
+      - unit: files/notmuch_new.timer
+      - unit: files/notmuch_new.service
     systemd_unit_install_dir: "/home/{{ user.name }}/.config/systemd/user/"
     systemd_unit_install_user: true
     systemd_unit_install_become: true
     systemd_unit_install_become_user: "{{ user.name }}"
+
