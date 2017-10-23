@@ -24,11 +24,6 @@
 - name: Add user to video group
   user: name={{ user.name }} groups=video append=yes
 
-- name: Install a decent screen locker
-  pacman:
-    name: slock
-    state: present
-
 - include: unclutter.yml
 - include: autorandr.yml
 - include: srandrd.yml

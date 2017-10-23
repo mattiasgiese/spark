@@ -1,0 +1,21 @@
+- name: Install additional tools
+  pacman:
+    name: "{{ item }}"
+  with_items:
+    - i3lock
+    - i3blocks
+    - dunst
+    - redshift
+    - compton
+    - nitrogen
+    - slock
+
+- name: Additional aur packages
+  aur:
+    name: "{{ item }}"
+  with_items:
+    - siji-git
+    - polybar
+  become: True
+  become_user: "{{ user.name }}"
+
