@@ -2,7 +2,6 @@
 - hosts: localhost
   become: yes
   roles:
-    - { role: systemd, tags: ['systemd'] }
     - { role: base, tags: ['base'] }
     - { role: gnupg, tags: ['gnupg'] }
     - { role: cron, tags: ['cron'] }
