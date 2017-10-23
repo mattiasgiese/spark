@@ -1,6 +1,6 @@
 ---
 - name: Install universal base packages
-  pacman: 
+  pacman:
     name: "{{ item }}"
     state: present
   with_items: "{{ base_packages }}"
@@ -27,16 +27,24 @@
     - aur
     - packages
 
-- name: Install cower
-  aur: name=cower
-  become: True
-  become_user: "{{ user.name }}"
+- name: Install AUR bootstrap packages
+  include_role:
+    name: base
+    tasks_from: aur_bootstrap
+  vars:
+    pkg_name: "{{ item.name }}"
+    gpg_key: "{{ item.gpg_key }}"
+  with_items:
+    - name: cower
+      gpg_key: '1EB2638FF56C0C53'
+    - name: pacaur
+      gpg_key: ''
   tags:
     - aur
     - packages
 
 - name: Install AUR base packages
-  aur: 
+  aur:
     name: "{{ item }}"
   become: True
   become_user: "{{ user.name }}"

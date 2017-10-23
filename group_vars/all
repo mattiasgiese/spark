@@ -1,6 +1,7 @@
 user:
     name: mattias
     uid: 1000
+    non_unique: yes
     group: mattias
     shell: /bin/bash
     email: mattiasgiese@posteo.net
@@ -18,8 +19,6 @@ dotfiles:
 aur:
     dir: aur
     packages:
-        - pacaur
-        - aura-bin
         - downgrade
         - overdue
         - miller
@@ -65,6 +64,7 @@ video_drivers:
 
 base_packages:
     - base-devel
+    - perl
     - atop
     - mosh
     - tmux
@@ -133,7 +133,7 @@ bootloader: grub
 postgresql:
     enable: False
 
-fingerprint: False
+fingerprint: True
 
 tor:
     run_on: trusted
