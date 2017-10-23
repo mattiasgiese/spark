@@ -1,25 +1,16 @@
 ---
-- name: Install pass
-  pacman: name=pass state=present
+- name: Make sure pass is installed
+  pacman:
+    name: pass
+    state: present
 
-- name: Install pass-otp
-  aur: name=pass-otp
-  become: True
+- name: Clone password store git repo
+  git:
+    repo: "{{ pass.repo }}"
+    dest: "/home/{{ user.name }}/.password-store"
+    accept_hostkey: yes
+    update: no
+    key_file: "{{ pass.ssh_key_path|default(omit) }}"
+  when: pass.repo is defined
+  become: yes
   become_user: "{{ user.name }}"
-  tags:
-    - aur
-
-- name: Install pass-update
-  aur: name=pass-update
-  become: True
-  become_user: "{{ user.name }}"
-  tags:
-    - aur
-
-- name: Install rofi-pass
-  aur: name=rofi-pass
-  become: True
-  become_user: "{{ user.name }}"
-  tags:
-    - aur
-    - rofi

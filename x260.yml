@@ -57,6 +57,7 @@
     - { role: nerdpr0n, tags: ['nerdpr0n'] }
     - { role: gajim, tags: ['gajim'] }
     - { role: logind, tags: ['logind'] }
+    - { role: pass, tags: ['pass'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"
