@@ -11,4 +11,4 @@
     path: "{{ logind_config }}"
     section: Login
     option: HandlePowerKey
-    value: poweroff
+    value: ignore
