@@ -1,0 +1,6 @@
+---
+- name: Make sure nvim plugins are installed correctly
+  shell: 'nvim +PlugUpgrade +PlugUpdate'
+  become: True
+  become_user: "{{ user.name }}"
+
