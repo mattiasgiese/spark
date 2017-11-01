@@ -58,6 +58,7 @@
     - { role: gajim, tags: ['gajim'] }
     - { role: logind, tags: ['logind'] }
     - { role: pass, tags: ['pass'] }
+    - { role: syncthing, tags: ['syncthing'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"

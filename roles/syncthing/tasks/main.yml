@@ -1,0 +1,12 @@
+---
+- name: Install syncthing
+  package:
+    name: syncthing
+    state: installed
+
+- name: "Start syncthing service for user {{ user.name }}"
+  service:
+    name: "syncthing@{{ user.name }}"
+    state: started
+    enabled: no
+
