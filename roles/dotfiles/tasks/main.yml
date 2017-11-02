@@ -1,6 +1,6 @@
 ---
 - name: Install rcm
-  aur: 
+  aur:
     name: rcm
     state: present
   become: True
@@ -48,4 +48,4 @@
   become: yes
   become_user: "{{ user.name }}"
 
-include_tasks: 'nvim.yml'
+- include_tasks: 'nvim.yml'

@@ -3,4 +3,3 @@
   shell: 'nvim +PlugUpgrade +PlugUpdate'
   become: True
   become_user: "{{ user.name }}"
-
