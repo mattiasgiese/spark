@@ -59,6 +59,7 @@
     - { role: logind, tags: ['logind'] }
     - { role: pass, tags: ['pass'] }
     - { role: syncthing, tags: ['syncthing'] }
+    - { role: autologin, tags: ['autologin'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"

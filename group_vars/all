@@ -1,5 +1,8 @@
 vagrant_testing: false
 
+autologin: True
+autologin_tty: 'tty1'
+
 pass:
   repo: 'git@git.intern.b1-systems.de:giese/passwords.git'
   # enable this for cloning

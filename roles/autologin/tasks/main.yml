@@ -1,0 +1,11 @@
+---
+- name: 'Create override directory for autologin config'
+  file:
+    path: "/etc/systemd/system/getty@{{ autologin_tty }}.service.d"
+    state: directory
+
+- name: "Configure autologin at {{ autologin_tty }} for {{ user.name }}"
+  template:
+    src: systemd_getty.j2
+    dest: "/etc/systemd/system/getty@{{ autologin_tty }}.service.d/autologin.conf"
+  when: autologin
