@@ -1,0 +1,34 @@
+---
+# simple gtk theme configuration
+# See https://wiki.archlinux.org/index.php/GTK%2B#Basic_theme_configuration
+- name: Install lxappareance for theme switching
+  package:
+    name: lxappearance
+    state: installed
+  when: gtk_install_utils
+
+- name: Install a decent font viewer
+  package:
+    name: gnome-font-viewer
+    state: installed
+  when: gtk_install_utils
+
+- name: Install desired gtk theme packages
+  package:
+    name: "{{ item }}"
+    state: installed
+  with_items: "{{ gtk_theme_packages }}"
+
+- name: "Write gtk 3 settings.ini for {{ user.name }}"
+  template:
+    dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
+    src: gtk3_settings_ini.j2
+    backup: yes
+    owner: "{{ user.name }}"
+
+- name: "Write gtkrc-2.0 for {{ user.name }}"
+  template:
+    dest: "/home/{{ user.name }}/.gtkrc-2.0"
+    src: gtk2rc.j2
+    backup: yes
+    owner: "{{ user.name }}"

@@ -1,0 +1,14 @@
+---
+gtk_theme_packages:
+    - arc-gtk-theme
+    - adapta-gtk-theme
+    - adwaita-icon-theme
+    - gnome-icon-theme-extras
+    - arc-icon-theme
+gtk_theme: 'Adwaita'
+gtk_icon_theme: 'Adwaita'
+gtk_cursor_theme: 'Adwaita'
+gtk_default_font: 'Cantarell'
+gtk_font_size: '11'
+gtk_prefer_dark_theme_variant: True
+gtk_install_utils: True
