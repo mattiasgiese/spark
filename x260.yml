@@ -61,6 +61,7 @@
     - { role: pass, tags: ['pass'] }
     - { role: syncthing, tags: ['syncthing'] }
     - { role: autologin, tags: ['autologin'] }
+    - { role: k8s, tags: ['k8s'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"
