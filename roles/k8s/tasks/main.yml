@@ -1,0 +1,12 @@
+---
+# some client tools to work with k8s
+- name: Install client tools for kubernetes
+  aur:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - kubeadm-bin
+    - minikube
+    - kops-bin
+    - kargo-cli
+
