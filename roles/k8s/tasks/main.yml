@@ -9,4 +9,5 @@
     - minikube
     - kops-bin
     - kargo-cli
-
+  become: True
+  become_user: "{{ user.name }}"
