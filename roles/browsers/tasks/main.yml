@@ -1,9 +1,14 @@
 ---
 - name: Install w3m
-  pacman: name=w3m state=present
+  package: name=w3m state=present
+
+- name: Install qutebrowser
+  package:
+    name: qutebrowser
+    state: installed
 
 - name: Install Firefox
-  pacman: name=firefox state=present
+  package: name=firefox state=present
   tags:
     - firefox
 
@@ -31,7 +36,7 @@
     - firejail
 
 - name: Install Chromium
-  pacman: name=chromium state=present
+  package: name=chromium state=present
   tags:
     - chromium
 
@@ -59,13 +64,13 @@
     - firejail
 
 - name: Install Pepper Flash
-  pacman: name=pepper-flash state=present
+  package: name=pepper-flash state=present
   tags:
     - chromium
 
 - name: Install tor-browser-en
   aur:
-    name: tor-browser-en 
+    name: tor-browser-en
     state: present
   become: True
   become_user: "{{ user.name }}"
@@ -123,7 +128,7 @@
     - chooser
 
 - name: Install surfraw
-  pacman: name=surfraw state=present
+  package: name=surfraw state=present
   tags:
     - surfraw
 
