@@ -24,8 +24,9 @@
 - name: Add user to video group
   user: name={{ user.name }} groups=video append=yes
 
-- include: unclutter.yml
-- include: autorandr.yml
-- include: srandrd.yml
-- include: autocutsel.yml
-- include: xdg.yml
+- include_tasks: unclutter.yml
+- include_tasks: autorandr.yml
+- include_tasks: srandrd.yml
+- include_tasks: autocutsel.yml
+- include_tasks: xdg.yml
+- include_tasks: backlight.yml
