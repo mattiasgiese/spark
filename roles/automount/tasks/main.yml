@@ -1,0 +1,14 @@
+---
+- name: Install automount related utils
+  package:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - udevil
+    - nfs-utils
+    - curlftpfs
+    - davfs2
+    - udisks2
+    - cifs-utils
+    - zenity
+
