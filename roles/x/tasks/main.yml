@@ -1,28 +1,28 @@
 ---
-- name: Install Xorg
-  pacman: name=xorg-server state=present
-
-- name: Install Xinit
-  pacman: name=xorg-xinit state=present
-
-- name: Install xmodmap
-  pacman: name=xorg-xmodmap state=present
-
-- name: Install xdpyinfo
-  pacman: name=xorg-xdpyinfo state=present
-
-- name: Install xev
-  pacman: name=xorg-xev state=present
-
-- name: Install xorg-sessreg
-  pacman: name=xorg-sessreg state=present
+- name: Install X.org and related utilities
+  package:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - xorg-server
+    - xorg-xkill
+    - xorg-xdpyinfo
+    - xorg-xmodmap
+    - xorg-xev
+    - xorg-sessreg
+    - xorg-xinit
 
 - name: Install video driver(s)
-  pacman: name={{ item }} state=present
+  package:
+    name: "{{ item }}"
+    state: present
   with_items: "{{ video_drivers }}"
 
 - name: Add user to video group
-  user: name={{ user.name }} groups=video append=yes
+  user:
+    name: "{{ user.name }}"
+    groups: 'video'
+    append: yes
 
 - include_tasks: unclutter.yml
 - include_tasks: autorandr.yml

@@ -4,5 +4,5 @@
     name: acpilight
     state: present
   become: True
-  become_user: "{{ user.name }}
-  when: 'GenuineIntel' in ansible_processor
+  become_user: "{{ user.name }}"
+  when: "'GenuineIntel' in ansible_processor"
