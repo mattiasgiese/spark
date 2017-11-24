@@ -37,4 +37,11 @@
     - aur
 
 - name: Install youtube-dl
-  pacman: name=youtube-dl state=present
+  package:
+    name: youtube-dl
+    state: present
+
+- name: Install clementine
+  package:
+    name: clementine
+    state: present
