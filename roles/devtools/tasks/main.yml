@@ -1,0 +1,9 @@
+---
+- name: Install some development related tools (AUR)
+  aur:
+    name: "{{ item }}"
+    state: present
+  become: True
+  become_user: "{{ user.name }}"
+  with_items:
+    - entr

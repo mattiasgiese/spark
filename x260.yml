@@ -22,6 +22,7 @@
     - { role: tor, tags: ['tor'], when: "tor is defined" }
     - { role: unbound, tags: ['unbound'] }
     - { role: editors, tags: ['editors'] }
+    - { role: devtools, tags: ['devtools'] }
     - { role: filesystems, tags: ['filesystems'] }
     - { role: archive, tags: ['archive'] }
     - { role: udisks, tags: ['udisks'] }
