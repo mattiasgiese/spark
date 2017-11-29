@@ -7,3 +7,5 @@
   become_user: "{{ user.name }}"
   with_items:
     - entr
+    - hugo
+    - pygmentize
