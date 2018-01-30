@@ -51,3 +51,12 @@
 
 - name: Install pdfgrep
   pacman: name=pdfgrep state=present
+
+- name: Install ranger and misc utils
+  pacman:
+    name: {{ item }}
+    state: present
+  with_items:
+    - ranger
+    - odt2txt
+    - ffmpegthumbnailer
