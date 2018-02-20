@@ -42,6 +42,11 @@
       - ttf-hack
       - tamsyn-font
 
+- name: Install gucharmap font viewer
+  package:
+    name: gucharmap
+    state: present
+
 - name: Install AUR fonts
   aur: 
     name: "{{ item }}"
