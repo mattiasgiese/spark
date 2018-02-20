@@ -40,6 +40,7 @@
       - ttf-droid
       - ttf-ubuntu-font-family
       - ttf-hack
+      - tamsyn-font
 
 - name: Install AUR fonts
   aur: 
