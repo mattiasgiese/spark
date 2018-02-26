@@ -54,7 +54,7 @@
 
 - name: Install ranger and misc utils
   pacman:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
   with_items:
     - ranger
