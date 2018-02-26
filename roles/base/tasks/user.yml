@@ -8,6 +8,8 @@
   user:
     name: "{{ user.name }}"
     group: "{{ user.group }}"
+    groups:
+      - 'uucp'
     password: "{{ user_password|password_hash('sha512') }}"
     shell: "{{ user.shell }}"
     update_password: on_create

@@ -44,7 +44,6 @@ aur:
     dir: aur
     packages:
         - downgrade
-        - overdue
         - miller
         - myrepos
         - ctmg
