@@ -1,0 +1,7 @@
+---
+- name: Install icon themes (AUR)
+  aur:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - paper-icon-theme
