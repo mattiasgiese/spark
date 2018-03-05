@@ -4,11 +4,6 @@
   tags:
     - rofi
 
-- name: Install i3-wm for rofi window switching
-  package: name=i3-wm state=present
-  tags:
-    - rofi
-
 - name: Install tools that extend/use rofi
   aur:
     name: "{{ item }}"
