@@ -45,3 +45,8 @@
   package:
     name: clementine
     state: present
+
+- name: Install playerctl
+  package:
+    name: playerctl
+    state: present
