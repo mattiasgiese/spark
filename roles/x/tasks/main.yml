@@ -11,6 +11,7 @@
     - xorg-xev
     - xorg-sessreg
     - xorg-xinit
+    - xorg-xprop
 
 - name: Install video driver(s)
   package:
