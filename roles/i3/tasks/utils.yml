@@ -9,13 +9,14 @@
     - compton
     - nitrogen
     - slock
+    - python-i3-py
 
 - name: Additional aur packages
   aur:
     name: "{{ item }}"
   with_items:
     - siji-git
-    - polybar
+    - polybar-git
   become: True
   become_user: "{{ user.name }}"
 
