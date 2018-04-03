@@ -33,6 +33,11 @@
   tags:
     - aur
 
+- name: Install elinks for inline html view
+  package:
+    name: elinks
+    state: installed
+
 - include_tasks: notmuch.yml
 - include_tasks: msmtp.yml
 - include_tasks: isync.yml
