@@ -10,3 +10,4 @@
     - hugo
     - pygmentize
     - the_silver_searcher
+    - ack
