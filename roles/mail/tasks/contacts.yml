@@ -1,5 +1,8 @@
 ---
 - name: Install abook
   package:
-    name: abook
+    name: "{{ item }}"
     state: installed
+  with_items:
+    - abook
+
