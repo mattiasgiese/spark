@@ -42,5 +42,5 @@
 - include_tasks: msmtp.yml
 - include_tasks: isync.yml
 # - include: offlineimap.yml
-# - include: mailsync.yml
+- include: mailsync.yml
 - include_tasks: contacts.yml
