@@ -1,6 +1,13 @@
 ---
-- name: Install notmuch
-  pacman: name=notmuch state=present
+- name: Install notmuch and friends
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - notmuch
+    - notmuch-runtime
+    - notmuch-mutt
+    - notmuch-vim
 
 - name: Install notmuch systemd timers and units
   include_role:
