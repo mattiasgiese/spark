@@ -9,3 +9,5 @@
     - khal
     - khard
     - vdirsyncer
+    - perl-text-autoformat
+    - perl-ical-parser
