@@ -8,6 +8,8 @@
   aur:
     name: "{{ item }}"
     state: present
+  become: true
+  become_user: "{{ user.name }}"
   with_items:
     - rofi-pass
     - rofi-dmenu
