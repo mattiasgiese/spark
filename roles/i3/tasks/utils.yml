@@ -11,6 +11,7 @@
     - slock
     - python-i3-py
     - kitty
+    - polybar
     - ponymix
 
 - name: Additional aur packages
@@ -18,7 +19,6 @@
     name: "{{ item }}"
   with_items:
     - siji-git
-    - polybar-git
   become: True
   become_user: "{{ user.name }}"
 
