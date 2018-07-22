@@ -5,9 +5,9 @@
     name: "{{ item }}"
     state: present
   with_items:
+    - kubelet-bin
     - kubeadm-bin
-    - minikube
-    - kops-bin
+    - minikube-bin
     - kargo-cli
   become: True
   become_user: "{{ user.name }}"
