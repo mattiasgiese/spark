@@ -10,6 +10,8 @@
     - nitrogen
     - slock
     - python-i3-py
+    - kitty
+    - ponymix
 
 - name: Additional aur packages
   aur:
