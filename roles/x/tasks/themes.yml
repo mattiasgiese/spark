@@ -2,6 +2,8 @@
 - name: Install icon themes (AUR)
   aur:
     name: "{{ item }}"
-    state: installed
+    state: present
+  become: true
+  become_user: "{{ user.name }}"
   with_items:
     - paper-icon-theme
