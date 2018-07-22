@@ -8,6 +8,7 @@
       - pulseaudio
       - pulseaudio-alsa
       - pavucontrol
+      - ponymix
 
 - name: Switch output to newly connected devices
   lineinfile: dest=/etc/pulse/default.pa
