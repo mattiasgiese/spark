@@ -2,6 +2,16 @@
 - include: tlp.yml
 - include: light-git.yml
 
+- name: Install upower
+  package:
+    name: upower
+    state: present
+
+- name: Install powertop
+  package:
+    name: powertop
+    state: present
+
 - name: Copy touchpad configuration file
   copy: src=30-touchpad.conf dest=/etc/X11/xorg.conf.d/30-touchpad.conf
 
