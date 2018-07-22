@@ -37,7 +37,7 @@
   with_items:
     - name: cower
       gpg_key: '1EB2638FF56C0C53'
-    - name: pacaur
+    - name: trizen
       gpg_key: ''
   tags:
     - aur
