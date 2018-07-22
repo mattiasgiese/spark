@@ -1,0 +1,67 @@
+---
+- hosts: piscosour
+  become: yes
+  roles:
+    #    - { role: base, tags: ['base'] }
+    #    - { role: gnupg, tags: ['gnupg'] }
+    #    - { role: cron, tags: ['cron'] }
+    #    - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
+    #    - { role: ssh, tags: ['ssh'] }
+    #    - { role: dotfiles, tags: ['dotfiles'] }
+    #    - { role: ssd, tags: ['ssd'] }
+    #    - { role: fonts, tags: ['fonts'] }
+    #    - { role: x, tags: ['x'] }
+    #    - { role: i3, tags: ['i3'] }
+    #    - { role: pass, tags: ['pass'] }
+    #    - { role: iptables, tags: ['iptables'] }
+    #    - { role: nettools, tags: ['nettools'] }
+    #    - { role: networkmanager, tags: ['networkmanager'] }
+    #    - { role: macchiato, tags: ['macchiato'] }
+    #    - { role: ntp, tags: ['ntp'] }
+    #    - { role: firejail, tags: ['firejail'] }
+    #    - { role: tor, tags: ['tor'], when: "tor is defined" }
+    #    - { role: unbound, tags: ['unbound'] }
+    #    - { role: editors, tags: ['editors'] }
+    #    - { role: devtools, tags: ['devtools'] }
+    #    - { role: filesystems, tags: ['filesystems'] }
+    #    - { role: archive, tags: ['archive'] }
+    #    - { role: udisks, tags: ['udisks'] }
+    #    - { role: spell, tags: ['spell'] }
+    #    - { role: browsers, tags: ['browsers'] }
+    #    - { role: yubikey, tags: ['yubikey'] }
+    #- { role: media, tags: ['media'] }
+    #- { role: mpv, tags: ['mpv'] }
+    #- { role: pianobar, tags: ['pianobar'] }
+    #- { role: laptop, tags: ['laptop'] }
+    #- { role: thinkpad, tags: ['thinkpad'], when: "'ThinkPad' in ansible_product_version" }
+    #- { role: screensaver, tags: ['screensaver'] }
+    #- { role: weechat, tags: ['weechat'] }
+    #- { role: taskwarrior, tags: ['taskwarrior'] }
+    #- { role: mail, tags: ['mail'] }
+    #- { role: cups, tags: ['cups'] }
+    #- { role: office, tags: ['office'] }
+    #- { role: redshift, tags: ['redshift'] }
+    #- { role: virtualbox, tags: ['virtualbox'] }
+    #- { role: hashicorp, tags: ['hashicorp'] }
+    #- { role: docker, tags: ['docker'] }
+    #- { role: sound, tags: ['sound'] }
+    #- { role: pim, tags: ['pim'] }
+    #- { role: calibre, tags: ['calibre'] }
+    #- { role: parcimonie, tags: ['parcimonie'], when: "tor is defined" }
+    #- { role: localtime, tags: ['localtime'], when: "localtime is defined" }
+    #- { role: bluetooth, tags: ['bluetooth'], when: "bluetooth is defined" }
+    #- { role: wttr, tags: ['wttr'] }
+    #- { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
+    #- { role: kiwix, tags: ['kiwix'] }
+    - { role: nerdpr0n, tags: ['nerdpr0n'] }
+    - { role: gtk, tags: ['gtk'] }
+    - { role: gajim, tags: ['gajim'] }
+    - { role: logind, tags: ['logind'] }
+    - { role: pass, tags: ['pass'] }
+    - { role: syncthing, tags: ['syncthing'] }
+    - { role: autologin, tags: ['autologin'] }
+    - { role: automount, tags: ['automount'] }
+    - { role: k8s, tags: ['k8s'] }
+  vars_prompt:
+    - name: user_password
+      prompt: "Enter desired user password"

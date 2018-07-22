@@ -1,0 +1,242 @@
+vagrant_testing: false
+
+autologin: True
+autologin_tty: 'tty1'
+
+gtk_theme_packages:
+    - arc-gtk-theme
+    - adapta-gtk-theme
+    - adwaita-icon-theme
+    - gnome-icon-theme-extras
+    - arc-icon-theme
+gtk_theme: 'Arc-Dark'
+gtk_icon_theme: 'Arc'
+gtk_cursor_theme: 'Adwaita'
+gtk_default_font: 'Cantarell'
+gtk_font_size: '11'
+gtk_prefer_dark_theme_variant: True
+gtk_install_utils: True
+
+pass:
+  repo: 'git@git.intern.b1-systems.de:giese/passwords.git'
+  # enable this for cloning
+  # ssh_key_path: '/path/to/sshkey'
+
+user:
+    name: mattias
+    uid: 1000
+    non_unique: yes
+    group: mattias
+    shell: /bin/bash
+    email: mattiasgiese@posteo.net
+    log:
+        dir: log
+        rotate: 8
+
+hostname: piscosour
+
+dotfiles:
+    url: git@github.com:mattiasgiese/dotfiles.git
+    destination: git/dotfiles
+    rcup_flags: -fx README.md
+
+aur:
+    dir: aur
+    packages:
+        - downgrade
+        - miller
+        - myrepos
+        - ctmg
+
+ssh:
+    port: 22
+    enable_sshd: False
+
+gnupg:
+    enable_agent: True
+    emulate_ssh: False
+
+mail:
+    sync_tool: isync
+    sync_pim: True
+    sync_taskwarrior: True
+    sync_time: 5min
+    sync_boot_delay: 2min
+    sync_on: trusted
+
+network:
+    spoof_mac: False
+    conn_check:
+        interval: 0
+    trusted_uuid:
+        - b21284e6-01af-492f-8bea-45a69ef22a23
+        - 4ddd6988-aad1-4927-b650-ea7d24e0138b
+        - f9b3c62c-2d9f-450a-ac9b-528ba4c85ded
+        - b94375d1-70f8-424f-a6d7-dc52d0ab7288
+        - f74f2bd5-8748-4e1e-98f9-dae2dd44b916
+        - faeec88c-79ec-4840-ab25-ea356af8a81b
+
+editors:
+    - neovim
+    - python-neovim
+    - python2-neovim
+
+
+video_drivers:
+    - libva-intel-driver
+
+base_packages:
+    - base-devel
+    - perl
+    - atop
+    - mosh
+    - tmux
+    - git
+    - subversion
+    - rsync
+    - glances
+    - dateutils
+    - coreutils
+    - moreutils
+    - most
+    - reflector
+    - bc
+    - ranger
+    - strace
+    - lsof
+    - sysstat
+    - arch-wiki-lite
+    - arch-wiki-docs
+    - python-keyring
+    - python-secretstorage
+    - tig
+    - dateutils
+    - ruby
+    - pv
+    - jq
+    - python-docs
+    - python2-docs
+    - screen
+    - units
+    - progress
+
+filesystem_packages:
+    - dosfstools
+    - ntfs-3g
+    - exfat-utils
+
+browser_choices:
+    - firefox -P default
+    - firefox -P work
+    - firewarden chromium
+    - play
+    - qcode
+    - "| xclip -selection c"
+    - chromium
+    - qutebrowser
+
+passwordless_sudo:
+    - /usr/bin/openvpn*
+
+tarsnapper:
+  deltas: 1h 1d 7d 30d 365d
+  period: DAILY
+  ac_only: True
+  run_on: trusted
+  random_delay: 600
+
+gitannex:
+    stop_on_untrusted: True
+
+bitlbee:
+    run_on: trusted
+    torify: True
+
+bootloader: grub
+
+postgresql:
+    enable: False
+
+fingerprint: True
+
+tor:
+    run_on: trusted
+
+localtime:
+    run_on: trusted
+
+nameservers:
+    - 8.8.8.8       # Google
+    - 209.244.0.3   # Level 3
+    - 74.82.42.42   # Hurricane Electric
+
+bluetooth:
+    disable: False
+
+firejail:
+    blacklist:
+        - ~/.calendars
+        - ~/.config/vdirsyncer
+        - ~/.contacts
+        - ~/.keys
+        - ~/.mbsyncrc
+        - ~/.offlineimap
+        - ~/.offlineimaprc
+        - ~/.password-store
+        - ~/.vdirsyncer
+        - ~/library/ledger
+
+cryptshot:
+    - name: alta
+      uuid: 0a0db776-84c5-48e1-9079-cacfbc5de8a3
+      keyfile: /home/pigmonkey/.keys/usb-alta.key
+      retain:
+        - level: daily
+          interval: 7
+        - level: weekly
+          interval: 6
+        - level: monthly
+          interval: 3
+    - name: bishorn
+      uuid: baeb40a2-b19e-4adc-8ef6-44ee720a4d1a
+      keyfile: /home/pigmonkey/.keys/usb-bishorn.key
+      retain:
+        - level: daily
+          interval: 7
+        - level: weekly
+          interval: 6
+        - level: monthly
+          interval: 3
+    - name: pilchuck
+      uuid: d96a0fc3-7ea1-42f7-b0d0-42e573c478bd
+      keyfile: /home/pigmonkey/.keys/usb-pilchuck.key
+      retain:
+        - level: daily
+          interval: 7
+        - level: weekly
+          interval: 6
+        - level: monthly
+          interval: 3
+
+journal:
+    max_size: 500M
+
+udisks:
+    auto_mount: True
+    shared_mount: True
+
+hostsctl:
+    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+himawaripy:
+    run_time: 15min
+    run_boot_delay: 2min
+    run_on: trusted
+    flags: --auto-offset --level 4
+
+docker_base_images:
+  - alpine:3.6
+  - busybox:latest
+  - centos:centos6
+  - centos:centos7
+  - ubuntu:16.04
