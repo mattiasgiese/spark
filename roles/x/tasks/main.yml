@@ -12,6 +12,7 @@
     - xorg-sessreg
     - xorg-xinit
     - xorg-xprop
+    - xorg-xinput
 
 - name: Install video driver(s)
   package:
