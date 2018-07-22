@@ -55,7 +55,7 @@
   when: extracted_pkg | changed
   become: yes
   become_user: "{{ user.name }}"
-  shell: ". /etc/profile; cd /tmp/{{ pkg_name }};makepkg --noconfirm --noprogressbar -mfs"
+  shell: ". /etc/profile; cd /tmp/{{ pkg_name }};makepkg --noconfirm --noprogressbar -fs"
   register: aur_makepkg_result
 
 - name: AUR | {{ pkg_name }} | install newly-built aur package with pacman
