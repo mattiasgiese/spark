@@ -1,6 +1,8 @@
 ---
 - name: Install msmtp
-  pacman: name=msmtp-mta state=present
+  package:
+    name: msmtp
+    state: present
   tags:
     - msmtp
 
