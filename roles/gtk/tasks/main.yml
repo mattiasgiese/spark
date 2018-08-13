@@ -19,6 +19,13 @@
     state: installed
   with_items: "{{ gtk_theme_packages }}"
 
+- name: "Create gtk 3 config directory for {{ user.name }}"
+  file:
+    state: directory
+    path: "/home/{{ user.name }}/.config/gtk-3.0"
+    owner: "{{ user.name }}"
+    mode: '0700'
+
 - name: "Write gtk 3 settings.ini for {{ user.name }}"
   template:
     dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
