@@ -13,6 +13,7 @@
     - kitty
     - polybar
     - ponymix
+    - gxkb
 
 - name: Additional aur packages
   aur:
