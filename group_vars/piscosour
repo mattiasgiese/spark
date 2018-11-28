@@ -119,6 +119,7 @@ base_packages:
     - screen
     - units
     - progress
+    - smartmontools
 
 filesystem_packages:
     - dosfstools
