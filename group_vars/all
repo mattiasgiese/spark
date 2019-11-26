@@ -37,7 +37,7 @@ hostname: amarula
 
 dotfiles:
     url: git@github.com:mattiasgiese/dotfiles.git
-    destination: git/dotfiles
+    destination: .dotfiles
     rcup_flags: -fx README.md
 
 aur:
