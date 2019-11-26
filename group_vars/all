@@ -76,7 +76,7 @@ network:
 editors:
     - neovim
     - python-neovim
-    - python2-neovim
+    - fzf
 
 
 video_drivers:
