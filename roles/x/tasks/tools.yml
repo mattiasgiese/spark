@@ -5,3 +5,4 @@
     state: installed
   with_items:
     - xorg-xkill
+    - xautolock
