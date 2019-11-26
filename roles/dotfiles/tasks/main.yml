@@ -26,7 +26,7 @@
   copy:
     src: "{{ dotfiles_ssh_key }}"
     dest: "{{ df_key }}"
-  mode: '0600'
+    mode: '0600'
   become: True
   become_user: "{{ user.name }}"
   when: dotfiles_ssh_key is defined
