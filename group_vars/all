@@ -44,9 +44,6 @@ aur:
     dir: aur
     packages:
         - downgrade
-        - miller
-        - myrepos
-        - ctmg
 
 ssh:
     port: 22
