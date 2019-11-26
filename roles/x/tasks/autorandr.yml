@@ -1,6 +1,6 @@
 ---
 - name: Install autorandr
-  aur: name=autorandr-git
+  aur: name=autorandr
   become: True
   become_user: "{{ user.name }}"
   tags:
